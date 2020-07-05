@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <title>Upload Data</title>
+</head>
+<style type="text/css">
+    .largetext1{
+        width:400px;
+        height:100px;
+    }
+    
+</style>
+<script>
+     $(document).ready(function() {
+        $("form").keypress(function(e) {
+          if (e.which == 13) {
+            return false;
+          }
+        }); 
+        
+     });
+</script>
+
+<body>
+
+    <center>
+        <h1>Welocme To Patil's World...</h1>
+        <h3>Use ||| for separating Data</h3><br>
+       <!-- <button id="addKeywords">ADD Keywords</button>  --><br><br>
+    <!-- <form action="submitData" method="POST"> -->
+    <form action="querysubmit" method="POST">
+        {% csrf_token %}
+        
+        Article Number : <input type="text" name="articleNum"/><br><br>
+        Statement : <input type="text" name="statement"/><br><br>
+        Keywords : <input type="text" name="keywords"/><br><br>
+        Description :<br><br>
+        <input type='text' name="description" placeholder="Enter Description Here..." class='largetext'></input><br><br>
+        References : <input type="text" name="references"/><br><br>
+        <div id="appendKeywordInput"></div>
+        <br><br>
+        <br><br>
+    <input type="submit" value="Upload Data"/>
+    </form>
+    </center>
+    
+</body>
+</html>

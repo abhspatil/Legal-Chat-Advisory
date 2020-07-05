@@ -1,0 +1,85 @@
+
+entities:
+  - catagory
+
+slots:
+  catagory:
+    type: text
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - Patil
+  - newsPatil
+  - article13
+  - article34
+  - article35
+  - article36 
+  - article37
+  - article40
+  - article41
+  - article24
+  - article25
+  - article26
+  - article27
+  - article29
+  - article30
+  - article31
+  - article32
+  - article42
+  - article43 
+  - article44
+  - article45
+  - article46
+  - article47
+  - article48
+  - article49
+  - article50
+  - article33
+  - article38
+  - realdata
+  
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_welcomePatil
+- action_get_news
+- action_get_articleData
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a Legal Advisory, powered by Patil92."
+
+  utter_welcomePatil:
+  - text: "Welcome To Patil92 World..!!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
